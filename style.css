@@ -121,6 +121,16 @@ button
     justify-content: space-between;
 }
 
+.top-lang-ru
+{
+    opacity: 1;
+}
+
+.top-lang-eng
+{
+    opacity: 0.24;
+}
+
 .top-enter
 {
     position: absolute;

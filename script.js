@@ -155,7 +155,7 @@ function pad_slide(num){
 // Функция открытия меню
 function side_show() {
     document.getElementById("side").style.display = 'flex';
-}
+}   
 
 // Функция закрытия меню
 function side_close() {
