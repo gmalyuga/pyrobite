@@ -152,14 +152,35 @@ function pad_slide(num){
     document.getElementById("side-pad-slide-button-" + num).style.background = '#D9C287';
 }
 
+//Функция автолистания слайдар
+function auto_slide_pad(str){
+    console.log(str)
+    if (str == 'start') {
+        //Ищу активный слайд
+        let activ_slide = 1;
+        while (getComputedStyle(document.getElementById("side-pad-slide-" + activ_slide)).display == 'none') {
+            activ_slide++;
+        }
+        //Листаю с интервалом в 3с
+        let timerId = setTimeout(function tick() {
+            activ_slide += 1;
+            if (activ_slide == 4) activ_slide = 1;
+            pad_slide(activ_slide);
+            timerId = setTimeout(tick, 3000); // (*)
+        }, 3000);
+    }
+}
+
 // Функция открытия меню
 function side_show() {
     document.getElementById("side").style.display = 'flex';
+    auto_slide_pad('start');
 }   
 
 // Функция закрытия меню
 function side_close() {
     document.getElementById("side").style.display = 'none';
+    auto_slide_pad();
 }
 
 function mobile_submenu(str) {

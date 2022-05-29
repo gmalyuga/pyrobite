@@ -1482,6 +1482,7 @@ button
 
 .side-pad-slide
 {
+    width: 420px;
     height: 616px;
     background: url(img/side-pad-slide-1.png);
 }
