@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <title>Mriya</title>
+</head>
+<body>
+    <div class="container">
+        <div id="mobile">
+            <div class="top">
+                <button class="top-button" onclick="side_show()"></button>
+                <button class="top-button-mobile" onclick="side_show_mobile()"></button>
+                <div class="top-links">
+                    <a href="">О комплексе</a>
+                    <a href="">Блог</a>
+                    <a href="">FAQ</a>
+                    <a href="">Контакты</a>
+                </div>
+                <div class="top-logo">
+                    <img src="img/logo.svg">
+                    <img src="img/logo-stars.svg" class="top-logo-stars">
+                </div>
+                <div class="top-lang">
+                    <a href="">RU</a>
+                    <a href="">ENG</a>
+                </div>
+                <div class="top-enter">
+                    <svg width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg" class="top-enter-key">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.87398 5C7.42994 6.72523 5.86384 8 4 8C1.79086 8 0 6.20914 0 4C0 1.79086 1.79086 0 4 0C5.86384 0 7.42994 1.27477 7.87398 3H11V1H14V3H15V5L7.87398 5ZM4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z" class="top-enter-key"/>
+                    </svg>                            
+                    <div class="top-enter-login">Вход<div class="top-enter-line"></div></div>
+                    <div class="top-enter-phone">8 800 500 6847</div>
+                </div>
+            </div>
+            <div class="head">
+                <div class="head-waves">
+                    <img src="img/head-waves.svg">
+                </div>
+                <div class="head-header">Family & Health Club</div>
+                <div class="head-title">Mriya Resort</div>
+                <div class="head-info">Российский курорт для всей семьи на берегу черного моря</div>
+                <div class="head-buttons">
+                    <button class="head-button-book">Найти номер</button>
+                    <button class="head-button-explore"><div class="head-button-explore-text">3D тур</div></button>
+                </div>
+                <div class="head-down">
+                    <div class="head-vector"></div>
+                    <button class="head-button-down"></button>
+                </div>
+                <div class="head-flower-stroke">
+                    <img src="img/flower_stroke.svg">
+                </div>
+                <div class="head-flower"></div>
+                <div class="head-social">
+                    <div class="head-social-border">
+                        <button class="head-social-button"><img src="img/social-button-facebook.svg"></button>
+                    </div>
+                    <div class="head-social-border">
+                        <button class="head-social-button"><img src="img/social-button-twitter.svg"></button>
+                    </div>
+                    <div class="head-social-border">
+                        <button class="head-social-button"><img src="img/social-button-instagram.svg"></button>
+                    </div>
+                </div>
+                <div class="head-weather">
+                    <div class="head-weather-leaf"></div>
+                    <div class="head-weather-leaf-stroke"></div>
+                    <div class="head-weather-cloud"></div>
+                    <div class="head-weather-pin"></div>
+                    <div class="head-weather-info">
+                        <div class="head-weather-info-num">27°</div>
+                        <div class="head-weather-info-disc">Облачно</div>
+                        <div class="head-weather-info-location">Ялта, Россия</div>
+                    </div>
+                </div>
+                <div class="head-leaf-block">
+                    <div class="head-leaf"></div>
+                    <div class="head-leaf-stroke"><img src="img/head-leaf-stroke.png" id="flower-stroke"></div> 
+                </div>
+            </div>
+            <div class="choose">
+                <div class="choose-header">Выберите свой отдых</div>
+                <div class="choose-form">
+                    <select class="choose-select">
+                        <option>Семейный отдых</option>
+                        <option>Не семейный отдых</option>
+                    </select>
+                    <input type="date" class="choose-date">
+                    <select class="choose-people">
+                        <option>2 взрослых  •  без детей  •  1 номер</option>
+                    </select>
+                    <button class="choose-button">Найти</button>
+                </div>
+                <div class="choose-category">
+                    <div class="choose-category-list">
+                        <button class="choose-category-tab" id="tab1" onclick="tab_click(1)">Спецпредложения</button>
+                        <button class="choose-category-tab" id="tab2" onclick="tab_click(2)">Афиша</button>
+                        <button class="choose-category-tab" id="tab3" onclick="tab_click(3)">Категории отдыха</button>
+                        <button class="choose-category-button-left" onclick="slide('left')"></button>
+                        <button class="choose-category-button-right" onclick="slide('right')"></button>
+                    </div>
+                    <div class="choose-category-line"></div>
+
+                    <div class="choose-category-tab-block">
+                        <div id="choose-slider-tab1">
+                            <div class="choose-category-tab-img" id="tab1img1">
+                                <div class="chose-category-tab-img-back">
+                                    <div class="chose-category-tab-title">-20%</div>
+                                    <div class="chose-category-tab-info">Для тех кто<br>рядом</div>
+                                </div>
+                            </div>
+                            <div class="choose-category-tab-img" id="tab1img2">
+                                <div class="chose-category-tab-img-back">
+                                    <div class="chose-category-tab-title">-10%</div>
+                                    <div class="chose-category-tab-info">Раннее<br>бронирование</div>
+                                </div>
+                            </div>
+                            <div class="choose-category-tab-img" id="tab1img3">
+                                <div class="chose-category-tab-img-back">
+                                    <div class="chose-category-tab-title">-30%</div>
+                                    <div class="chose-category-tab-info">Это слайд<br>номер 3</div>
+                                </div>
+                            </div>
+                            <div class="choose-category-tab-img" id="tab1img4">
+                                <div class="chose-category-tab-img-back">
+                                    <div class="chose-category-tab-title">-40%</div>
+                                    <div class="chose-category-tab-info">Это слайд<br>номер 4</div>
+                                </div>
+                            </div>
+                            <div class="choose-category-tab-img" id="tab1img5">
+                                <div class="chose-category-tab-img-back">
+                                    <div class="chose-category-tab-title">-50%</div>
+                                    <div class="chose-category-tab-info">Это слайд<br>номер 5</div>
+                                </div>
+                            </div>
+                            <div class="choose-category-tab-img" id="tab1img6">
+                                <div class="chose-category-tab-img-back">
+                                    <div class="chose-category-tab-title">-60%</div>
+                                    <div class="chose-category-tab-info">Это слайд<br>номер 6</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="choose-slider-tab2">
+                            <div class="choose-category-tab-img" id="tab2img1">
+                                <div class="chose-category-tab-img-back">
+                                    <div class="chose-category-tab-title">-20%</div>
+                                    <div class="chose-category-tab-info">Это вкладка<br>Афиша</div>
+                                </div>
+                            </div>
+                            <div class="choose-category-tab-img" id="tab2img2">
+                                <div class="chose-category-tab-img-back">
+                                    <div class="chose-category-tab-title">-10%</div>
+                                    <div class="chose-category-tab-info">Раннее<br>бронирование</div>
+                                </div>
+                            </div>
+                            <div class="choose-category-tab-img" id="tab2img3">
+                                <div class="chose-category-tab-img-back">
+                                    <div class="chose-category-tab-title">-30%</div>
+                                    <div class="chose-category-tab-info">Это слайд<br>номер 3</div>
+                                </div>
+                            </div>
+                            <div class="choose-category-tab-img" id="tab2img4">
+                                <div class="chose-category-tab-img-back">
+                                    <div class="chose-category-tab-title">-40%</div>
+                                    <div class="chose-category-tab-info">Это слайд<br>номер 4</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="choose-slider-tab3">
+                            <div class="choose-category-tab-img" id="tab3img1">
+                                <div class="chose-category-tab-img-back">
+                                    <div class="chose-category-tab-title">-20%</div>
+                                    <div class="chose-category-tab-info">Это вкладка<br>Категории отдыха</div>
+                                </div>
+                            </div>
+                            <div class="choose-category-tab-img" id="tab3img2">
+                                <div class="chose-category-tab-img-back">
+                                    <div class="chose-category-tab-title">-10%</div>
+                                    <div class="chose-category-tab-info">Раннее<br>бронирование</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="info">
+                <div class="info-waves"></div>
+                <div class="info-text">Mriya Resort & SPA — <b>больше чем просто отдых</b></div>
+                <div class="info-flower"></div> 
+                <div class="info-description">В окружении необычного природного ландшафта курорт становится по-настоящему уникальным. Это место идеально для тех, кто больше гор любит только море.</div>
+                <button class="info-button">О комплексе</button>
+                <div class="info-background-left"></div>
+                <div class="info-background-right"></div>
+            </div>
+            <div class="allinclusive">
+                <div class="allinclusive-head">
+                    <div class="allinclusive-title">Всё включено</div>
+                    <button class="allinclusive-button-left" onclick="slider_allinclusive('left')"></button>
+                    <button class="allinclusive-button-right" onclick="slider_allinclusive('right')"></button>
+                </div>
+                <div class="allinclusive-slider">
+                    <div id="allinclusive-slide-1">
+                        <div id="allinclusive-slide-1-imadge"></div>
+                        <div class="allinclusive-slide-description-text">Заниматесь в тренажерном зале и посещайте групповые тренировки</div>
+                        <div class="allinclusive-slide-description-readmore"><p>Читать больше</p><img src="img/allinclusive---.svg"></div>
+                    </div>
+                    <div id="allinclusive-slide-2">
+                        <div id="allinclusive-slide-2-imadge"></div>
+                        <div class="allinclusive-slide-description-text">Питаться в ресторане шведской линии согласно выбранному варианту</div>
+                        <div class="allinclusive-slide-description-readmore"><p>Читать больше</p><img src="img/allinclusive---.svg"></div>
+                    </div>
+                    <div id="allinclusive-slide-3">
+                        <div id="allinclusive-slide-3-imadge"></div>
+                        <div class="allinclusive-slide-description-text">Исследовать все общедоступные зоны и территории комплекса</div>
+                        <div class="allinclusive-slide-description-readmore"><p>Читать больше</p><img src="img/allinclusive---.svg"></div>
+                    </div>
+                    <div class="allinclusive-slider-title">
+                        <h1>Оздоровление</h1>
+                        <p>Mriya Resort — это маленький город со множеством возможностей, каждый найдет себе занятие по вкусу</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tablet"><div class="tablet-img"></div></div>
+            <div class="tablet-logo"><img src="img/logo.svg"></div>
+            <div class="side" id="side">
+                <div class="side-header">
+                    <div class="side-top">
+                        <div class="side-top-logo"></div>
+                        <div class="side-top-links">
+                            <a href="" class="side-links-elem">О комплексе</a>
+                            <a href="" class="side-links-elem">Блог</a>
+                            <a href="" class="side-links-elem">FAQ</a>
+                            <a href="" class="side-links-elem">Контакты</a>
+                        </div>
+                        <div class="side-top-enter">                  
+                                <svg width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg" class="side-top-enter-key">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.87398 5C7.42994 6.72523 5.86384 8 4 8C1.79086 8 0 6.20914 0 4C0 1.79086 1.79086 0 4 0C5.86384 0 7.42994 1.27477 7.87398 3H11V1H14V3H15V5L7.87398 5ZM4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z" class="top-enter-key"/>
+                                </svg>     
+                            <div class="top-enter-login">Вход<div class="top-enter-line"></div></div>
+                        </div>
+                    </div>
+                    <button class="side-close" onclick="side_close()"><img src="img/side-close.svg"></button>
+                </div>
+                <div class="side-pad">
+                    <div class="side-social-buttons">
+                        <div class="side-social-line"></div>
+                        <button class="side-social-buttons-button" id="side-social-button-facebook"></button>
+                        <button class="side-social-buttons-button" id="side-social-button-twitter"></button>
+                        <button class="side-social-buttons-button" id="side-social-button-instagram"></button>
+                    </div>
+                    <ui class="side-pad-menu" id="scrollbar">
+                        <li class="side-pad-menu-elem" onmouseover="submenu(1)"><a href="" class="side-pad-elem"><div class="side-pad-elem-text">Размещение</div></a></li>
+                        <li class="side-pad-menu-elem"  onmouseover="submenu(2)"><a href="" class="side-pad-elem"><div class="side-pad-elem-text">Медицина</div></a></li>
+                        <li class="side-pad-menu-elem"  onmouseover="submenu(3)"><a href="" class="side-pad-elem"><div class="side-pad-elem-text">Мероприятия</div></a></li>
+                        <li class="side-pad-menu-elem"  onmouseover="submenu(4)"><a href="" class="side-pad-elem"><div class="side-pad-elem-text">Красота и восстановление</div></a></li>
+                        <li class="side-pad-menu-elem"  onmouseover="submenu(5)"><a href="" class="side-pad-elem"><div class="side-pad-elem-text">Бары и рестораны</div></a></li>
+                        <li class="side-pad-menu-elem"  onmouseover="submenu(6)"><a href="" class="side-pad-elem"><div class="side-pad-elem-text">Развлечения</div></a></li>
+                        <li class="side-pad-menu-elem"  onmouseover="submenu(7)"><a href="" class="side-pad-elem"><div class="side-pad-elem-text">Спорт</div></a></li>
+                        <li class="side-pad-menu-elem"  onmouseover="submenu(8)"><a href="" class="side-pad-elem"><div class="side-pad-elem-text">Детям</div></a></li>
+                        <li class="side-pad-menu-elem"  onmouseover="submenu(9)"><a href="" class="side-pad-elem"><div class="side-pad-elem-text">Транспорт</div></a></li>
+                    </ui>
+                    <div class="side-menu-line"></div>
+                    <div class="side-pad-subblock" id="submenu-0">
+                        <ui class="side-pad-submenu" id="scrollbar">
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text"></div></a></li>
+                        </ui>
+                        <p class="side-pad-submenu-info"></p>
+                    </div>
+                    <div class="side-pad-subblock" id="submenu-1">
+                        <ui class="side-pad-submenu" id="scrollbar">
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Размещение 1</div></a></li>
+                        </ui>
+                        <p class="side-pad-submenu-info">Sint enim magna irure anim nostrud ut commodo nulla incididunt irure. Labore mollit ad duis aliquip dolore officia minim sit do. Pariatur fugiat sint aliquip ullamco aute proident est officia fugiat ut duis esse. In mollit aliquip aute anim sit enim culpa nostrud enim excepteur fugiat culpa.</p>
+                    </div>
+                    <div class="side-pad-subblock" id="submenu-2">
+                        <ui class="side-pad-submenu" id="scrollbar">
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Медицина 1</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Медицина 2</div></a></li>
+                        </ui>
+                        <p class="side-pad-submenu-info">Sint enim magna irure anim nostrud ut commodo nulla incididunt irure. Labore mollit ad duis aliquip dolore officia minim sit do. Pariatur fugiat sint aliquip ullamco aute proident est officia fugiat ut duis esse. In mollit aliquip aute anim sit enim culpa nostrud enim excepteur fugiat culpa.</p>
+                    </div>
+                    <div class="side-pad-subblock" id="submenu-3">
+                        <ui class="side-pad-submenu" id="scrollbar">
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Мероприятия 1</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Мероприятия 2</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Мероприятия 3</div></a></li>
+                        </ui>
+                        <p class="side-pad-submenu-info">Sint enim magna irure anim nostrud ut commodo nulla incididunt irure. Labore mollit ad duis aliquip dolore officia minim sit do. Pariatur fugiat sint aliquip ullamco aute proident est officia fugiat ut duis esse. In mollit aliquip aute anim sit enim culpa nostrud enim excepteur fugiat culpa.</p>
+                    </div>
+                    <div class="side-pad-subblock" id="submenu-4">
+                        <ui class="side-pad-submenu" id="scrollbar">
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Краота и восстановление 1</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Краота и восстановление 2</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Краота и восстановление 3</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Краота и восстановление 4</div></a></li>
+                        </ui>
+                        <p class="side-pad-submenu-info">Sint enim magna irure anim nostrud ut commodo nulla incididunt irure. Labore mollit ad duis aliquip dolore officia minim sit do. Pariatur fugiat sint aliquip ullamco aute proident est officia fugiat ut duis esse. In mollit aliquip aute anim sit enim culpa nostrud enim excepteur fugiat culpa.</p>
+                    </div>
+                    <div class="side-pad-subblock" id="submenu-5">
+                        <ui class="side-pad-submenu" id="scrollbar">
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Бары и рестораны 1</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Бары и рестораны 2</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Бары и рестораны 3</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Бары и рестораны 4</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Бары и рестораны 5</div></a></li>
+                        </ui>
+                        <p class="side-pad-submenu-info">Sint enim magna irure anim nostrud ut commodo nulla incididunt irure. Labore mollit ad duis aliquip dolore officia minim sit do. Pariatur fugiat sint aliquip ullamco aute proident est officia fugiat ut duis esse. In mollit aliquip aute anim sit enim culpa nostrud enim excepteur fugiat culpa.</p>
+                    </div>
+                    <div class="side-pad-subblock" id="submenu-6">
+                        <ui class="side-pad-submenu" id="scrollbar">
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Развлечения 1</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Развлечения 2</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Развлечения 3</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Развлечения 4</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Развлечения 5</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Развлечения 6</div></a></li>
+                        </ui>
+                        <p class="side-pad-submenu-info">Sint enim magna irure anim nostrud ut commodo nulla incididunt irure. Labore mollit ad duis aliquip dolore officia minim sit do. Pariatur fugiat sint aliquip ullamco aute proident est officia fugiat ut duis esse. In mollit aliquip aute anim sit enim culpa nostrud enim excepteur fugiat culpa.</p>
+                    </div>         
+                    <div class="side-pad-subblock" id="submenu-7">
+                        <ui class="side-pad-submenu" id="scrollbar">
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Спорт 1</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Спорт 2</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Спорт 3</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Спорт 4</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Спорт 5</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Спорт 6</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Спорт 7</div></a></li>
+                        </ui>
+                        <p class="side-pad-submenu-info">Sint enim magna irure anim nostrud ut commodo nulla incididunt irure. Labore mollit ad duis aliquip dolore officia minim sit do. Pariatur fugiat sint aliquip ullamco aute proident est officia fugiat ut duis esse. In mollit aliquip aute anim sit enim culpa nostrud enim excepteur fugiat culpa.</p>
+                    </div>
+                    <div class="side-pad-subblock" id="submenu-8">
+                        <ui class="side-pad-submenu" id="scrollbar">
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Детям 1</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Детям 2</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Детям 3</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Детям 4</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Детям 5</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Детям 6</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Детям 7</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Детям 8</div></a></li>
+                        </ui>
+                        <p class="side-pad-submenu-info">Sint enim magna irure anim nostrud ut commodo nulla incididunt irure. Labore mollit ad duis aliquip dolore officia minim sit do. Pariatur fugiat sint aliquip ullamco aute proident est officia fugiat ut duis esse. In mollit aliquip aute anim sit enim culpa nostrud enim excepteur fugiat culpa.</p>
+                    </div>
+                    <div class="side-pad-subblock" id="submenu-9">
+                        <ui class="side-pad-submenu" id="scrollbar">
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Транспорт 1</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Транспорт 2</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Транспорт 3</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Транспорт 4</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Транспорт 5</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Транспорт 6</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Транспорт 7</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Транспорт 8</div></a></li>
+                            <li><a href="" class="side-pad-subelem"><div class="side-pad-elem-text">Транспорт 9</div></a></li>
+                        </ui>
+                        <p class="side-pad-submenu-info">Sint enim magna irure anim nostrud ut commodo nulla incididunt irure. Labore mollit ad duis aliquip dolore officia minim sit do. Pariatur fugiat sint aliquip ullamco aute proident est officia fugiat ut duis esse. In mollit aliquip aute anim sit enim culpa nostrud enim excepteur fugiat culpa.</p>
+                    </div>
+                    <div class="side-pad-slider-block">
+                        <div class="side-pad-slide" id="side-pad-slide-1">
+                            <div class="side-pad-slide-background">
+                                <div class="side-pad-slide-info">
+                                    <div class="side-pad-slide-title">Слайд 1</div>
+                                    <div class="side-pad-slide-text">10-21 дня</div>
+                                    <button class="side-pad-slide-button">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side-pad-slide" id="side-pad-slide-2">
+                            <div class="side-pad-slide-background">
+                                <div class="side-pad-slide-info">
+                                    <div class="side-pad-slide-title">Слайд 2</div>
+                                    <div class="side-pad-slide-text">10-21 дня</div>
+                                    <button class="side-pad-slide-button">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side-pad-slide" id="side-pad-slide-3">
+                            <div class="side-pad-slide-background">
+                                <div class="side-pad-slide-info">
+                                    <div class="side-pad-slide-title">Слайд 3</div>
+                                    <div class="side-pad-slide-text">10-21 дня</div>
+                                    <button class="side-pad-slide-button">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side-pad-slide-radio">
+                            <div class="side-pad-slide-elem">
+                                <div class="side-pad-slide-radio-border" id="side-pad-slide-border-1">
+                                <button class="side-pad-slide-radio-button" id="side-pad-slide-button-1" onclick="pad_slide(1)"></button></div>
+                            </div>
+                            <div class="side-pad-slide-elem">
+                                <div class="side-pad-slide-radio-border" id="side-pad-slide-border-2">
+                                <button class="side-pad-slide-radio-button" id="side-pad-slide-button-2" onclick="pad_slide(2)"></button></div>
+                            </div>
+                            <div class="side-pad-slide-elem">
+                                <div class="side-pad-slide-radio-border" id="side-pad-slide-border-3">
+                                <button class="side-pad-slide-radio-button" id="side-pad-slide-button-3" onclick="pad_slide(3)"></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mail">
+                    <div class="side-pad-line"></div>
+                    <div class="side-pad-mail">info@mriyaresort.com</div>
+                </div>
+            </div>
+        </div>
+        <div class="side-mobile" id="side-mobile">
+            <div class="side-mobile-top">
+                <div class="side-mobile-lang-ru">RU</div>
+                <div class="side-mobile-lang-eng">RU</div>
+                <div class="side-mobile-logo">
+                    <img src="img/logo.svg">
+                </div>
+                <button class="side-mobile-close" onclick="side_close_mobile()"><img src="img/close.svg"></button>
+            </div>
+            <ui class="side-mobile-pad-menu">
+                <li><button class="side-mobile-pad-elem" id="side-mobile-menu-1" onclick="mobile_submenu(1)"><div class="side-mobile-pad-elem-text">Размещение</div></button></li>
+                <div class="side-mobile-submenu" id="side-mobile-submenu-1">
+                    <li><a href="" class="side-mobile-pad-subelem">Размещение</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Размещение</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Размещение</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Размещение</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Размещение</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Размещение</a></button></li>
+                </div>
+                <li><button class="side-mobile-pad-elem" id="side-mobile-menu-2" onclick="mobile_submenu(2)"><div class="side-mobile-pad-elem-text">Медицина</div></button></li>
+                <div class="side-mobile-submenu" id="side-mobile-submenu-2">
+                    <li><a href="" class="side-mobile-pad-subelem">Медицина</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Медицина</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Медицина</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Медицина</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Медицина</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Медицина</a></button></li>
+                </div>
+                <li><button class="side-mobile-pad-elem" id="side-mobile-menu-3" onclick="mobile_submenu(3)"><div class="side-mobile-pad-elem-text">Мероприятия</div></button></li>
+                <div class="side-mobile-submenu" id="side-mobile-submenu-3">
+                    <li><a href="" class="side-mobile-pad-subelem">Мероприятия</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Мероприятия</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Мероприятия</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Мероприятия</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Мероприятия</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Мероприятия</a></button></li>
+                </div>
+                <li><button class="side-mobile-pad-elem" id="side-mobile-menu-4" onclick="mobile_submenu(4)"><div class="side-mobile-pad-elem-text">Красота и восстановление</div></button></li>
+                <div class="side-mobile-submenu" id="side-mobile-submenu-4">
+                    <li><a href="" class="side-mobile-pad-subelem">Красота и восстановление</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Красота и восстановление</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Красота и восстановление</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Красота и восстановление</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Красота и восстановление</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Красота и восстановление</a></button></li>
+                </div>
+                <li><button class="side-mobile-pad-elem" id="side-mobile-menu-5" onclick="mobile_submenu(5)"><div class="side-mobile-pad-elem-text">Бары и рестораны</div></button></li>
+                <div class="side-mobile-submenu" id="side-mobile-submenu-5">
+                    <li><a href="" class="side-mobile-pad-subelem">Бары и рестораны</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Бары и рестораны</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Бары и рестораны</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Бары и рестораны</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Бары и рестораны</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Бары и рестораны</a></button></li>
+                </div>
+                <li><button class="side-mobile-pad-elem" id="side-mobile-menu-6" onclick="mobile_submenu(6)"><div class="side-mobile-pad-elem-text">Развлечения</div></button></li>
+                <div class="side-mobile-submenu" id="side-mobile-submenu-6">
+                    <li><a href="" class="side-mobile-pad-subelem">Развлечения</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Развлечения</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Развлечения</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Развлечения</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Развлечения</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Развлечения</a></button></li>
+                </div>
+                <li><button class="side-mobile-pad-elem" id="side-mobile-menu-7" onclick="mobile_submenu(7)"><div class="side-mobile-pad-elem-text">Спорт</div></button></li>
+                <div class="side-mobile-submenu" id="side-mobile-submenu-7">
+                    <li><a href="" class="side-mobile-pad-subelem">Спорт</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Спорт</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Спорт</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Спорт</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Спорт</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Спорт</a></button></li>
+                </div>
+                <li><button class="side-mobile-pad-elem" id="side-mobile-menu-8" onclick="mobile_submenu(8)"><div class="side-mobile-pad-elem-text">Детям</div></button></li>
+                <div class="side-mobile-submenu" id="side-mobile-submenu-8">
+                    <li><a href="" class="side-mobile-pad-subelem">Детям</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Детям</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Детям</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Детям</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Детям</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Детям</a></button></li>
+                </div>
+                <li><button class="side-mobile-pad-elem" id="side-mobile-menu-9" onclick="mobile_submenu(9)"><div class="side-mobile-pad-elem-text">Транспорт</div></button></li>
+                <div class="side-mobile-submenu" id="side-mobile-submenu-9">
+                    <li><a href="" class="side-mobile-pad-subelem">Транспорт</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Транспорт</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Транспорт</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Транспорт</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Транспорт</a></button></li>
+                    <li><a href="" class="side-mobile-pad-subelem">Транспорт</a></button></li>
+                </div>
+            </ui>
+            <button class="side-mobile-find">Найти номер</button>
+            <div class="side-mobile-links" id="links-row-1">
+                <div class="side-mobile-elem">О комплексе</div>
+                <div class="side-mobile-elem">Блог</div>
+                <div class="side-mobile-elem">FAQ</div>
+            </div>
+            <div class="side-mobile-links" id="links-row-2">
+                <div class="side-mobile-elem">Афиша</div>
+                <div class="side-mobile-elem">Спецпредложения</div>
+            </div>
+            <div class="side-mobile-links" id="links-row-3">
+                <div class="side-mobile-elem">Важная информация</div>
+                <div class="side-mobile-elem">Контакты</div>
+            </div>                       
+             <div class="side-mobile-social-buttons">
+                <button class="side-social-buttons-button" id="side-social-button-facebook"></button>
+                <button class="side-social-buttons-button" id="side-social-button-twitter"></button>
+                <button class="side-social-buttons-button" id="side-social-button-instagram"></button>
+            </div>
+            <div class="side-mobile-number">8 800 500 6847</div>
+            <div class="side-mobile-mail">info@mriyaresort.com</div>
+        </div>
+    </div>
+</body> 
+</html>
